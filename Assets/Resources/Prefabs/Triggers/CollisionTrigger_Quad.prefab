@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Trigger_Quad
+  m_Name: CollisionTrigger_Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,9 +77,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a516fa294576df429976e00a28f4c63, type: 3}
+  m_Script: {fileID: 11500000, guid: da83e3687c901604990d4629c9186a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerName: 
   triggers: []
 --- !u!1001 &100100000
 Prefab:
