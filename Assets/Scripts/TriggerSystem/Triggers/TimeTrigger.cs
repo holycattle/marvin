@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class TimeTrigger : Trigger {
+public class TimeTrigger : TriggerAction {
 
 	public bool startOnAwake = true;
 	public bool restartOnFinish = false;

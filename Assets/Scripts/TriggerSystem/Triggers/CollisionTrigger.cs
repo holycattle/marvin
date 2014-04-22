@@ -3,15 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider2D))]
-public class CollisionTrigger : Trigger {
+public class CollisionTrigger : TriggerAction {
+
+	void Start() {
+		isTrigger = true;
+	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		PullTrigger(other.gameObject);
+		if (!IsLocked()) {
+			PullTrigger(other.gameObject);
+		}
 	}
 	
-	public override void SetEnabled(bool b) {
-		base.SetEnabled(b);
-		collider2D.enabled = b;
-	}
+	public override void ExecuteAction(TriggerAction trigger, GameObject invoker) {
+		if (isTrigger) {
+			return;
+		}
 
+		base.ExecuteAction(trigger, invoker);
+		Unlock();
+	}
 }

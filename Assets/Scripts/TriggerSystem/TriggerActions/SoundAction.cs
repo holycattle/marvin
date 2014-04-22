@@ -7,7 +7,7 @@ public class SoundAction : TriggerAction {
 
 	public AudioClip oneShotClip;
 
-	public override void ExecuteAction(Trigger trigger, GameObject invoker) {
+	public override void ExecuteAction(TriggerAction trigger, GameObject invoker) {
 		base.ExecuteAction(trigger, invoker);
 
 		if (oneShotClip != null) {

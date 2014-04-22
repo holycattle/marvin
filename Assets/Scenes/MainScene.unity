@@ -183,6 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f728350edb1297a49a84292c1eef5ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerName: 
+  lockingCounter: 0
+  triggers: []
   oneShotClip: {fileID: 8300000, guid: 6e74f0fc00ac5a74683be80265b2dafc, type: 3}
 --- !u!82 &58925415
 AudioSource:
@@ -291,7 +294,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400000, guid: e4a220d4671667f4f8020a4d2099d466, type: 2}
       propertyPath: triggers.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e4a220d4671667f4f8020a4d2099d466, type: 2}
       propertyPath: m_LocalPosition.x
@@ -331,12 +334,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e4a220d4671667f4f8020a4d2099d466, type: 2}
       propertyPath: countdownTime
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: e4a220d4671667f4f8020a4d2099d466, type: 2}
       propertyPath: triggers.Array.data[1]
       value: 
       objectReference: {fileID: 1623412343}
+    - target: {fileID: 11400000, guid: e4a220d4671667f4f8020a4d2099d466, type: 2}
+      propertyPath: triggers.Array.data[2]
+      value: 
+      objectReference: {fileID: 1997028989}
+    - target: {fileID: 11400000, guid: e4a220d4671667f4f8020a4d2099d466, type: 2}
+      propertyPath: triggers.Array.data[3]
+      value: 
+      objectReference: {fileID: 1442022284}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4a220d4671667f4f8020a4d2099d466, type: 2}
   m_RootGameObject: {fileID: 1815970933}
@@ -364,12 +375,83 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 849909442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.40392256, y: 2.71622729, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1442022282}
   - {fileID: 1629436376}
   - {fileID: 58925416}
+  - {fileID: 1997028988}
   m_Father: {fileID: 0}
+--- !u!1001 &957288012
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 849909443}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.49138832
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.90772438
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: text
+      value: Who am I? Say hello to the world!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: textArea.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: textArea.y
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: textArea.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: textArea.height
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: textSkin
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f1ae9ce57835544d9c0c7122be23234,
+        type: 2}
+    - target: {fileID: 100000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+  m_RootGameObject: {fileID: 1997028987}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &976980136
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +517,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976980136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.31747532, y: 7.83946371, z: 0}
+  m_LocalPosition: {x: 3.41478705, y: 3.11797857, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -502,6 +584,136 @@ Prefab:
   m_RootGameObject: {fileID: 58925413}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1442022281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+  m_PrefabInternal: {fileID: 2082966645}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1442022282}
+  - 82: {fileID: 1442022285}
+  - 114: {fileID: 1442022284}
+  - 114: {fileID: 1442022283}
+  m_Layer: 0
+  m_Name: NarrationAction_001
+  m_TagString: Untagged
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1442022282
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+  m_PrefabInternal: {fileID: 2082966645}
+  m_GameObject: {fileID: 1442022281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.21146584, y: 10.2304344, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 849909443}
+--- !u!114 &1442022283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 68fb995e6118dc642b95dc3eee215907,
+    type: 2}
+  m_PrefabInternal: {fileID: 2082966645}
+  m_GameObject: {fileID: 1442022281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31b2a7cc5fe8844e81d6ed58abfc0b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: 
+  lockingCounter: 0
+  triggers: []
+  textSkin: {fileID: 11400000, guid: 0f1ae9ce57835544d9c0c7122be23234, type: 2}
+  isAttachedToSound: 1
+  duration: 4
+  text: Across the street, about ten minutes from the sea, lived a small family in
+    a large home.
+  textArea:
+    serializedVersion: 2
+    x: 0
+    y: .699999988
+    width: 1
+    height: .300000012
+--- !u!114 &1442022284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 68fb995e6118dc642b95dc3eee215907,
+    type: 2}
+  m_PrefabInternal: {fileID: 2082966645}
+  m_GameObject: {fileID: 1442022281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f728350edb1297a49a84292c1eef5ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: 
+  lockingCounter: 0
+  triggers: []
+  oneShotClip: {fileID: 8300000, guid: 25212b0755519e44d922a1440f895d65, type: 3}
+--- !u!82 &1442022285
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 68fb995e6118dc642b95dc3eee215907,
+    type: 2}
+  m_PrefabInternal: {fileID: 2082966645}
+  m_GameObject: {fileID: 1442022281}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1591772779
 Prefab:
   m_ObjectHideFlags: 0
@@ -563,7 +775,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: a01c0446608e3734196298002910b050, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a01c0446608e3734196298002910b050, type: 2}
+      propertyPath: lockingCounter
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a01c0446608e3734196298002910b050, type: 2}
@@ -618,7 +834,7 @@ BoxCollider2D:
     type: 2}
   m_PrefabInternal: {fileID: 1591772779}
   m_GameObject: {fileID: 1623412338}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
@@ -655,7 +871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerName: 
-  isTriggerable: 1
+  lockingCounter: 1
   triggers:
   - {fileID: 58925414}
 --- !u!1 &1629436373
@@ -687,6 +903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f728350edb1297a49a84292c1eef5ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerName: 
+  lockingCounter: 0
+  triggers: []
   oneShotClip: {fileID: 8300000, guid: 15045e696384f8745860d04afabee60d, type: 3}
 --- !u!82 &1629436375
 AudioSource:
@@ -798,13 +1017,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerName: 
-  isTriggerable: 0
+  lockingCounter: 0
   triggers:
   - {fileID: 1629436374}
   - {fileID: 1623412343}
+  - {fileID: 1997028989}
+  - {fileID: 1442022284}
   startOnAwake: 1
   restartOnFinish: 0
-  countdownTime: 2
+  countdownTime: 4
 --- !u!1001 &1972032558
 Prefab:
   m_ObjectHideFlags: 0
@@ -851,5 +1072,114 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d7e9d13950525549bd4040b851a5c1b, type: 2}
   m_RootGameObject: {fileID: 1629436373}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &1997028987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+  m_PrefabInternal: {fileID: 957288012}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1997028988}
+  - 114: {fileID: 1997028989}
+  m_Layer: 0
+  m_Name: TextAction
+  m_TagString: Untagged
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1997028988
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 44938ce79353eff40913fd18ff3187bb, type: 2}
+  m_PrefabInternal: {fileID: 957288012}
+  m_GameObject: {fileID: 1997028987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.49138832, y: 6.90772438, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 849909443}
+--- !u!114 &1997028989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 44938ce79353eff40913fd18ff3187bb,
+    type: 2}
+  m_PrefabInternal: {fileID: 957288012}
+  m_GameObject: {fileID: 1997028987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31b2a7cc5fe8844e81d6ed58abfc0b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: 
+  lockingCounter: 0
+  triggers: []
+  textSkin: {fileID: 11400000, guid: 0f1ae9ce57835544d9c0c7122be23234, type: 2}
+  isAttachedToSound: 0
+  duration: 4
+  text: Who am I? Say hello to the world!
+  textArea:
+    serializedVersion: 2
+    x: 0
+    y: .699999988
+    width: 1
+    height: .300000012
+--- !u!1001 &2082966645
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 849909443}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.21146584
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 10.2304344
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: m_Name
+      value: NarrationAction_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: oneShotClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 25212b0755519e44d922a1440f895d65, type: 3}
+    - target: {fileID: 11400002, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: text
+      value: Across the street, about ten minutes from the sea, lived a small family
+        in a large home.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+      propertyPath: isAttachedToSound
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 68fb995e6118dc642b95dc3eee215907, type: 2}
+  m_RootGameObject: {fileID: 1442022281}
   m_IsPrefabParent: 0
   m_IsExploded: 1
