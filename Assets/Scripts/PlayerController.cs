@@ -3,7 +3,6 @@
 2. set velocity
 
 */
-
 using UnityEngine;
 using System.Collections;
 
@@ -12,21 +11,22 @@ public class PlayerController : MonoBehaviour {
 	private bool facingRight;
 	Animator animator;
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		animator = this.GetComponent<Animator>();
 		facingRight = true;
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate() {
 		float d = Input.GetAxis("Horizontal");
 		animator.SetFloat("Speed", Mathf.Abs(d));
 
-		if(d > 0 && !facingRight) {
+		if (d > 0 && !facingRight) {
 			Flip();
-		} else if(d < 0 && facingRight) {
+		} else if (d < 0 && facingRight) {
 			Flip();
 		}
+		transform.Translate(new Vector3(Time.fixedDeltaTime * MAX_SPEED * d, 0, 0));
 	}
 
 	void Flip() {
